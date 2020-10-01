@@ -2,8 +2,9 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options 
 from bs4 import BeautifulSoup
 import time
-# we are doing thiss to avoid constant pop-ups that do not let us access the exact html that we want to 
+# time is used to wait for the page to load to access its contents 
 
+# Creating a driver to access the browser
 chromedriver = '/chromerdriver'
 chrome_options = webdriver.ChromeOptions()
 prefs = {"profile.default_content_setting_values.notifications" : 2}
@@ -22,7 +23,7 @@ with open("file.txt",'r') as file :
 # You can later try to expand it for number of acccounts
 
 num_friends = 0
-
+#finding required elements using querySelector
 if len(ls) == 2 :
 	#logging in
 	browser.find_element_by_id('email').send_keys(ls[0])
