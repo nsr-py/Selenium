@@ -1,7 +1,8 @@
+# This file is used to make the credentials file
 import time
 from getpass import getpass
 # getpass.getpass() helps take input without showing it on the terminal as it 
-#is typed by the console
+# is typed by the console
 ls = []
 d = {}
 y = 'y'
